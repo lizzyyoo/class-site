@@ -1,0 +1,82 @@
+body {
+  background-image: url('chalkboard.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h2 {
+  font-family: 'Fredericka the Great',cursive;
+  text-align: center;
+  font-size: 90px;
+  color: White;
+}
+a {
+  color: White;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 50vw;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto; margin-top: 95px;
+  border: 15px dashed White;
+}
+.top{
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 100%;
+  justify-content: space-between;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+.box {
+  height: 10%;
+  border: 6px solid White;
+  background: LightSlateGrey;
+
+  font-family: 'Fredericka the Great',cursive;
+  text-align: center;
+  font-size: 30px;
+  color: White;
+  padding-top: 10px;
+}
+
+
+.right{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+.right-box {
+  height: 10%;
+  border: 6px solid White;
+  background: LightSlateGrey;
+
+  font-family: 'Fredericka the Great',cursive;
+  text-align: center;
+  font-size: 30px;
+  color: White;
+  padding-top: 10px;
+}

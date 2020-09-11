@@ -1,0 +1,192 @@
+<!doctype html>
+  <html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+      <style>
+      * {
+        box-sizing: border-box;
+      }
+        .sticky{
+          position: sticky;
+          top: 0;
+          max-width: 1000px;
+          padding: 0px 20px 40px 20px;
+          background-color: CornflowerBlue;
+          margin: auto ;
+          font-size: 20px; color: White;font-family: 'Comfortaa', cursive;
+        }
+        .img{
+          position: sticky;
+          top: 0;
+          max-width: 10px;
+          padding: 50px 10px 50px 25px;
+          background-color: CornflowerBlue;
+          margin: auto ;
+        }
+
+        .sidenav {
+          width: 350px;
+          position: fixed;
+          z-index: 1;
+          top: 20;
+          left: 10;
+          background-color: CornflowerBlue;
+          overflow-x: hidden;
+          padding-top: 8px 0;
+        }
+        .main {
+          margin-left: 390px; /* Same width as the sidebar + left position in px */
+          font-size: 20px; /* Increased text to enable scrolling */
+          padding: 0px 10px;
+          font-family: 'Comfortaa', cursive;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        .full-container {
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          max-width: 1100px;
+          margin-left: 400px;
+          background: CornflowerBlue;
+          padding-bottom: 140px;
+        }
+        .top-container {
+          display: flex;
+          flex-direction: row;
+          height: 40%;
+          background: CornflowerBlue;
+          margin: 10px;
+        }
+        .photos {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          background: rgb(166, 202, 245);
+          margin-right: 20px;
+        }
+        .photos1 {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          background: rgb(166, 202, 245);
+          margin-left: 20px;
+        }
+        .photos2 {
+          display: block;
+          width: 40%;
+          height: 100%;
+          box-sizing: border-box;
+          background: rgb(166, 202, 245);
+          margin-left: 20px;
+        }
+        .photos3 {
+          display: block;
+          width: 40%;
+          height: 100%;
+          box-sizing: border-box;
+          background: rgb(166, 202, 245);
+          margin-left: 80px;
+        }
+        .photos4 {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          background: rgb(166, 202, 245);
+          margin-right: 0px;
+        }
+
+        .first {
+          height: 100%;
+          width:100%;
+        }
+        a {
+          color: white;
+        }
+        h2{
+          font-family: 'Comfortaa', cursive;
+          text-align: center;
+          font-size: 30px;
+          color: white;
+
+        }
+        h3{
+          font-family: 'Comfortaa', cursive;
+          text-align: center;
+          font-size: 50px;
+          margin-top: 90px;
+        }
+        p {
+          font-family: 'Comfortaa', cursive;
+          color: white;
+        }
+
+
+
+</style>
+</head>
+<body>
+  <body style="background-color:rgb(20, 38, 65)";>
+
+<div class="sidenav">
+  <img class="img"src="Nakimportrait.jpg" style="max-width : 300px";>
+  <p class="sticky"><a href="https://www.instagram.com/na_son/?hl=en">Na Kim</a> is a NYC illustrator and art director at the publishing house Farrar, Straus and Giroux. Her book covers have been selected as one of The New York Times’ best book covers of the year for the past four consecutive years.
+</div>
+
+  <div class="full-container">
+    <div class="top-container">
+      <div class="photos">
+        <img class="first" src="Book2.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos">
+        <img class="first" src="Book1.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos4">
+        <img class="first" src="Book9.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos1">
+        <img class="first" src="Book8.jpg" style="max-width : 260px">
+      </div>
+    </div>
+
+    <div class="top-container">
+      <div class="photos">
+        <img class="first" src="Book3.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos">
+        <img class="first" src="Book5.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos4">
+        <img class="first" src="Book6.jpg" style="max-width : 260px">
+      </div>
+      <div class="photos1">
+        <img class="first" src="Book7.jpg" style="max-width : 260px">
+      </div>
+    </div>
+
+    <div class="top-container">
+      <div class="photos3">
+        <h3><a href="redo1.html">Interview</a></h3>
+      </div>
+      <div class="photos2">
+        <h2>Na Kim Recommends :</h2>
+        <p>Medicare for All.</p>
+        <p>Laura Van den Berg's <a href="https://www.indiebound.org/book/9780374102098">I Hold a Wolf by the Ears.</a>
+        <p>Bryan Washington's <a href="https://www.newyorker.com/culture/kitchen-notes/bread-pudding-and-the-comforts-of-queer-baking"> writing on food.</a>
+        <p>Listen to your body.</p>
+        <p><a href="https://open.spotify.com/album/4F0LJueCDliCH7Bg4PPVil">The Hours</a> sountrack</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  </body>
+  </html>

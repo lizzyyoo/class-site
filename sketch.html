@@ -1,0 +1,131 @@
+<!doctype html>
+  <html>
+  <head>
+      <style>
+      * {
+        box-sizing: border-box;
+      }
+
+
+        .full-container {
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          max-width: 1900px;
+          padding: 130px 50px 0px 70px;
+        }
+        .container {
+          display: flex;
+          flex-direction: row;
+          height: 40%;
+          margin: 20px;
+        }
+        .divide {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          margin-right: 20px;
+          }
+        .last-divide {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          margin-left: 20px;
+        }
+
+        .divide2 {
+          display: block;
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          margin-right: 0px;
+        }
+        .flower {
+          width: 260px;
+          height: 80px;
+          background: rgb(223, 131, 175);
+          border-radius: 50px;
+        }
+        .flower::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 260px;
+          height: 80px;
+          background: rgb(223, 131, 175);
+          border-radius: 50px;
+          transform: rotate(60deg)
+        }
+        .flower::after {
+          content: "";
+          display: block;
+          width: 260px;
+          height: 80px;
+          background: rgb(223, 131, 175);
+          border-radius: 50px;
+          transform: rotate(-60deg)
+        }
+        .first {
+          height: 100%;
+          width:100%;
+        }
+
+
+</style>
+</head>
+<body>
+  <body style="background-color:rgb(16, 84, 64)";>
+
+  <div class="full-container">
+    <div class="container">
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide2">
+        <div class="flower"></div>
+      </div>
+      <div class="last-divide">
+        <div class="flower"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide2">
+        <div class="flower"></div>
+      </div>
+      <div class="last-divide">
+        <div class="flower"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide">
+        <div class="flower"></div>
+      </div>
+      <div class="divide2">
+        <div class="flower"></div>
+      </div>
+      <div class="last-divide">
+        <div class="flower"></div>
+      </div>
+
+    </div>
+
+
+  </div>
+  </body>
+  </html>
