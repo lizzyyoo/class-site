@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background:rgb(242, 173, 18);
+}
+
+.circle {
+  height: 45vw;
+  width: 45vw;
+  border-radius: 50%;
+  background: rgb(250, 226, 156);
+
+  position: absolute;
+  top:50%;
+  left:48%;
+  transform: translate(-50%, -50%);
+
+  background-image: url(fishes2.png);
+  background-repeat: repeat-x;
+  background-size: 60%;
+  animation: fill 18s linear infinite;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  animation: color 18s linear infinite;
+}
+
+
+
+
+@keyframes fill {
+  0% {
+    background-position: left 350px bottom -600px;
+  }
+  40% {
+    background-position: left 200px top 100px;
+  }
+  70% {
+    background-position: right 500px top 150px;
+  }
+  90% {
+    background-position:  top -300px;
+  }
+  100% {
+    background-position: left -600px bottom -650px;
+  }
+
+}
+
+@keyframes color {
+  0% {
+    background:rgb(242, 173, 18);
+  }
+  20% {
+    background:rgb(242, 153, 18);
+  }
+  40% {
+    background:rgb(242, 132, 18);
+  }
+  80% {
+    background:rgb(242, 153, 18);
+  }
+  100% {
+     background:rgb(242, 173, 18);
+
+
+
+}

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size:100%;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.border-bar {
+  width:100vw;
+  height:100vh;
+  background: blue;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left {
+  width: 50%;
+  height: 90%;
+  background:rgb(88, 211, 218);
+  display: flex;
+}
+.right {
+  width: 50%;
+  height: 90%;
+  background:rgb(178, 91, 214);
+  display: flex;
+}
+
+.top {
+  width:100vw;
+  height:100vh;
+  background: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center-bar {
+  width:100%;
+  height:70%;
+  background: black;
+  display:flex;
+
+}
+
+
+
+.bottom {
+  width:80%;
+  height:30%;
+  background: rgb(204, 53, 20);
+  display: flex;
+  margin-top:5%;margin-bottom: 5%;
+}
+.login {
+  width: 100%;
+  height: 10%;
+  background: white;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.space {
+  width:100%;
+  background:rgb(67, 28, 101);
+  display: flex;
+}
+
+.menu-bar {
+  width:100%;
+  height: 100%;
+  background:rgb(67, 28, 101);
+  display: flex;
+}
+
+.top2 {
+  width:100%;
+  height:100%;
+}
+.item {
+  width:100%;
+  height:400px;
+  background:gray;
+  justify-content: space-between;
+  align-items: center;
+  display:flex;
+  flex-direction: row;
+}
+.a {
+  background: rgb(155, 166, 175);
+}
+.c {
+  background: rgb(133, 201, 5);
+}
+.item2{
+  width:100%;
+  height:472px;
+  background:rgb(205, 52, 30);
+  justify-content: space-between;
+  align-items: center;
+  display:flex;
+  flex-direction: row;
+}
+.leftsquare {
+  width:50%;
+  height:100%;
+  background: black;
+}
+.rightsquare {
+  width:50%;
+  height:100%;
+  background:rgb(217, 69, 37);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.square {
+  width: 25%;
+  height: 80%;
+  background: white;
+}
+
+.square2 {
+  height: 30%;
+  background: rgb(204, 53, 20);
+}
+
+
+
+/*@media screen and (max-width:800px) {
+  html {
+    font-size: 40px;
+  }
+  .center-bar {
+    flex-direction: column;
+  }
+
+  .side-bar {
+    width:100%;
+    height: 10%;
+  }
+
+  .true-center {
+    width:100%;
+    height: 80%;
+  }
+  .menu-bar {
+    flex-wrap: wrap;
+  }
+  .item {
+    height:200px;
+  }
+}*/
