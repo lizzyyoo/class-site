@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size:100%;
-}
 
 .main-container {
   width: 100vw;
@@ -14,25 +11,6 @@ html {
 
 }
 
-.border-bar {
-  width:100vw;
-  height:100vh;
-  background: blue;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.left {
-  width: 50%;
-  height: 90%;
-  background:rgb(88, 211, 218);
-  display: flex;
-}
-.right {
-  width: 50%;
-  height: 90%;
-  background:rgb(178, 91, 214);
-  display: flex;
-}
 
 .top {
   width:100vw;
@@ -48,10 +26,7 @@ html {
   height:70%;
   background: black;
   display:flex;
-
 }
-
-
 
 .bottom {
   width:80%;
@@ -60,21 +35,15 @@ html {
   display: flex;
   margin-top:5%;margin-bottom: 5%;
 }
+
 .login {
   width: 100%;
   height: 10%;
   background: white;
   flex-direction: row;
   justify-content: space-between;
-
-
 }
 
-.space {
-  width:100%;
-  background:rgb(67, 28, 101);
-  display: flex;
-}
 
 .menu-bar {
   width:100%;
@@ -96,12 +65,7 @@ html {
   display:flex;
   flex-direction: row;
 }
-.a {
-  background: rgb(155, 166, 175);
-}
-.c {
-  background: rgb(133, 201, 5);
-}
+
 .item2{
   width:100%;
   height:472px;
@@ -125,39 +89,79 @@ html {
   justify-content: space-between;
 }
 .square {
-  width: 25%;
-  height: 80%;
+  width: 20%;
+  height: 70%;
   background: white;
-}
-
-.square2 {
-  height: 30%;
-  background: rgb(204, 53, 20);
+  font-size: 2rem;
+  text-align: center;
 }
 
 
 
-/*@media screen and (max-width:800px) {
+@media screen and (max-width:1200px) {
   html {
-    font-size: 40px;
+    font-size: 25px;
+  }
+  .bottom {
+    background: rgb(43, 98, 170);
+    width: 50%;
+    height: 20%;
+  }
+
+  .rightsquare{
+    background: rgb(43, 98, 170);
+  }
+  .item {
+    flex-wrap: wrap;
+    height: 150%;
+    justify-content: space-between;
+  }
+  .square {
+    width: 45%;
+    height: 40%;
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .bottom {
+    background: rgb(205, 244, 9);
+  }
+  .rightsquare{
+    background: rgb(205, 244, 9);
+  }
+  .top {
+    flex-direction: row;
   }
   .center-bar {
     flex-direction: column;
+    height:80%;
   }
-
-  .side-bar {
-    width:100%;
-    height: 10%;
+  .bottom {
+    width: 40%;
+    height: 72.1%;
+    margin-top: 16.5%;
   }
-
-  .true-center {
-    width:100%;
-    height: 80%;
-  }
-  .menu-bar {
+  .bottom-bar {
     flex-wrap: wrap;
   }
-  .item {
-    height:200px;
+  .item2 {
+    flex-direction: column;
   }
-}*/
+  .leftsquare {
+    width: 100%;
+  }
+  .rightsquare {
+    width: 100%;
+  }
+  .item {
+    flex-direction: column;
+    height: 250%;
+  }
+  .square{
+    width: 100%;
+    height: 20%;
+    font-size: 6rem;
+  }
+
+}
