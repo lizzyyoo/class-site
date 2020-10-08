@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Exercise</title>
+
+  <style>
+    body {
+      background: rgb(76, 135, 122) ;
+    }
+    .position {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+    }
+
+    .photo {
+      width: 770px;
+      height: 69vh;
+    }
+  </style>
+</head>
+
+<body>
+        <div class="position">
+          <img class="photo" src="Richmond.jpg">
+          <img class="photo" src="Richmond2.jpg">
+          <img class="photo" src="Richmond3.jpg">
+          <img class="photo" src="Richmond4.jpg">
+        </div>
+
+<script>
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("photo");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+</script>
+</body>
+
+</html>
