@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="run.png">
+
+  <title> ESCAPE into the night</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-filter: blur(70px);
+  }
+
+  </style>
+
+ </head>
+
+ <body>
+
+     <canvas></canvas>
+
+
+   <script>
+   const Light = function(x, y, z) {
+     this.x = x;
+     this.y = y;
+     this.z = z;
+     this.size = 20;
+   };
+
+   var context = document.querySelector("canvas").getContext("2d");
+
+   var height = document.documentElement.clientHeight;
+   var width  = document.documentElement.clientWidth;
+
+   var lights = new Array();
+
+   var depth = 10500;
+
+   for(let i = 0; i < 50; i ++) {
+    lights[i] = new Light(Math.random() * width, Math.random() * height, i * (depth / 50));
+    }
+
+
+   function loop() {
+
+
+     window.requestAnimationFrame(loop);
+
+     height = document.documentElement.clientHeight;
+     width  = document.documentElement.clientWidth;
+
+     context.canvas.height = height;
+     context.canvas.width  = width;
+
+     context.fillStyle = "rgb(0, 0, 0)";
+     context.fillRect(0, 0, width, height);
+
+     for (let j = lights.length - 1; j > -1; j--) {
+
+       let light = lights[j];
+
+       let view = 500;
+       let scale = view / (view + light.z);
+       light.z -= 5;
+
+
+       context.fillStyle = "rgb(251, 245, 166)";
+       context.fillRect(light.x, light.y, light.size * scale, light.size * scale);
+     }
+
+   }
+
+loop();
+
+
+
+   </script>
+
+ </body>
+
+</html>
