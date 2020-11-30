@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>The Spirit of the Pumpkins Descended into the Heavens - Yayoi Kusama</title>
+<link rel="icon" type="image/png" href="dot.png">
+
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+var canvas = document.getElementById('canvas');
+var c = canvas.getContext('2d');
+
+var innerWidth = window.innerWidth,
+    innerHeight = window.innerHeight,
+	radius = 17,
+	dotsIndex = 0,
+	dots = [],
+	TWO_PI = Math.PI*2,
+	centerX = innerWidth/2,
+	centerY = innerHeight/2,
+	focalLength = 200,
+	dotRadius = null,
+	dotX = null,
+	dotY = null,
+	numDots = 1000,
+	mouse = {},
+	dotX_dir = 0,
+	dotY_dir = 0;
+
+	canvas.width = innerWidth;
+	canvas.height = innerHeight;
+
+window.addEventListener('mousemove', function(e){
+   mouse.x = e.x;
+   mouse.y = e.y;
+
+   if(mouse.x < centerX){
+     dotX_dir += 5;
+   }else{
+     dotX_dir += -5;
+   }
+
+   if(mouse.y < centerY){
+     dotY_dir += 5;
+   }else{
+     dotY_dir += -5;
+   }
+});
+
+canvas.addEventListener('mousewheel', function(e){
+   if(e.deltaY < 0){
+     focalLength *= 1.1;
+   }else{
+     focalLength /= 1.1;
+   }
+
+   if(focalLength >= innerWidth){
+     focalLength = innerWidth - 20;
+   }else if(focalLength < 100){
+     focalLength = 100;
+   }
+});
+
+
+function dot(x,y,z){
+    this.x = x;
+	  this.y = y;
+	  this.z = z;
+	  this.radius = radius;
+	  this.color = "black";
+
+	  dotsIndex++;
+	  dots[dotsIndex] = this;
+	  this.id = dotsIndex;
+
+	this.update = function(){
+	  dotX = (this.x - centerX) * (focalLength / this.z);
+	  dotX += centerX;
+
+	  dotY = (this.y - centerY) * (focalLength / this.z);
+	  dotY += centerY;
+
+	  dotRadius = radius * (focalLength / this.z);
+
+	  dotX += dotX_dir;
+	  dotY += dotY_dir;
+
+	  this.z += -2;
+	  if(this.z <= 0){
+	     this.z = parseInt(innerWidth);
+	  }
+	  this.draw();
+	}
+	   this.draw = function(){
+		     c.beginPath();
+		     c.arc(dotX,dotY,dotRadius, TWO_PI, false);
+		     c.fillStyle = this.color;
+		     c.fill();
+		     c.closePath();
+	   }
+}
+for(var i = 0; i < numDots; i++){
+	x = Math.random() * innerWidth;
+	y = Math.random() * innerHeight;
+	z = Math.random() * innerWidth;
+	new dot(x,y,z);
+}
+function animate(){
+    requestAnimationFrame(animate);
+	c.fillStyle = "rgb(251, 203, 0)";
+	c.fillRect(0,0,innerWidth,innerHeight);
+
+	for( var i in dots){
+	  dots[i].update();
+	}
+}
+
+animate();
+
+
+</script>
+</body>
+</html>

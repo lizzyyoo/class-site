@@ -1,0 +1,126 @@
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body {
+  color:rgb(107, 107, 107);
+  background-color: rgb(108, 171, 230);
+  margin:0;
+  padding:0;
+  animation: colorchange 10s linear infinite;
+
+}
+.background {
+  animation: colorchange 10s linear infinite;
+}
+@keyframes colorchange {
+  0% {
+    background:rgb(255, 255, 255) ;
+  }
+  25% {
+    background: rgb(252, 235, 159);
+  }
+  50% {
+    background:rgb(173, 216, 255);
+  }
+  75% {
+    background: rgb(172, 172, 172);
+  }
+  100% {
+    background: rgb(254, 254, 254);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:minmax(600px, 300px);
+  justify-content: center;
+  margin:300px;
+
+}
+.container {
+  box-shadow:0px 2px 8px 0px rgb(87, 87, 87);
+  text-align:center;
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  margin-top: -50px;
+}
+.bannerimg{
+  position:absolute;
+  background-image: url(https://prod-aws1-wallpaper-com.s3-eu-west-1.amazonaws.com/main/do-ho-suh-victoria-miro-02-embed.jpg);
+  height:200px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ykBanner{
+  position:absolute;
+  background-image: url(https://img.jakpost.net/c/2018/05/07/2018_05_07_45471_1525692255._large.jpg);
+  height:200px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.AKbanner{
+  position:absolute;
+  background-image: url(https://www.blackqube.de/wp-content/uploads/2019/11/kapoor-2-1000x576.jpeg);
+  height:200px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.profile-img {
+  width:128px;
+  clip-path:circle(60px at center);
+  margin-top:72px;
+}
+.name {
+  font-size:24px;
+}
+.description {
+  margin:16px 16px 16px 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size:16px;
+  text-align:center;
+}
+.descriptionv2 {
+  margin:16px 16px 16px 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size:16px;
+  text-align:center;
+}
+.btn{
+  width:100%;
+  border:none;
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+  background-color: rgb(43, 115, 181);
+  padding: 16px;
+}
+.btn2{
+  width:100%;
+  border:none;
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+  background-color: rgb(251, 203, 0);
+  padding: 16px;
+}
+.btn3{
+  width:100%;
+  border:none;
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+  background-color: rgb(52, 52, 52);
+  padding: 16px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Scale,Color & Volume - Anish Kapoor</title>
+<link rel="icon" type="image/png" href="silver.png">
+
+
+
+<style>
+body {
+  background-image: url('kapoorback.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+video {
+  position: absolute;
+  top:50%;
+  left:48%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <canvas id="canvas" width="1000" height="1080"></canvas>
+    <video id="video" width="1000" height="1080" autoplay></video>
+
+
+
+<script>
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
+let video = document.querySelector("#video");
+
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({video:true}).then(stream => {
+    video.srcObject = stream;
+    video,play();
+  });
+}
+
+
+</script>
+</body>
+</html>

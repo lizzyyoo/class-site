@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Scale,Color & Volume - Anish Kapoor</title>
+<link rel="icon" type="image/png" href="silver.png">
+
+<style>
+body {
+  margin: 0;
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+  <canvas></canvas>
+<body>
+
+
+
+
+<script>
+var img = new Image();
+img.onload = start;
+img.src = "https://www.blackqube.de/wp-content/uploads/2019/11/kapoor-2-1000x576.jpeg";
+
+function start() {
+
+  var canvas = document.querySelector("canvas");
+  var ctx = canvas.getContext("2d");
+
+  function movement(x, y, l) {
+    return x + (y - x) * l;
+  }
+
+  function upDownMove(upDown) {
+    return Math.sin(upDown) * 0.4 + 0.4;
+  }
+
+  function render(time) {
+    time *= 0.001;
+
+    resize(canvas);
+
+    var t1 = time;
+    var t2 = time * 0.3;
+
+    for (var i = 0; i < canvas.height; ++i) {
+      var range = i / canvas.height;
+
+      var wave1 = Math.sin((range + 0.8) * movement(5, 10, upDownMove(t1))) * 100;
+      var wave2 = Math.sin((range + 0.8) * movement(5, 10, upDownMove(t2))) * 100;
+      var waves = wave1 + wave2;
+
+      var src = i * img.height / canvas.height + waves;
+      src = Math.max(0, Math.min(img.height - 1, src));
+
+      ctx.drawImage(
+        img,
+        0, src, img.width, 1,
+        0, i, canvas.width, 1);
+    }
+
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+
+  function resize(canvas) {
+    var width = canvas.clientWidth;
+    var height = canvas.clientHeight;
+    if (width != canvas.width || height != canvas.height) {
+      canvas.width = width;
+      canvas.height = height;
+    }
+  }
+}
+</script>
+</body>
+</html>
